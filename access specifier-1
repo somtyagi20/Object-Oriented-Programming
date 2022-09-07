@@ -1,0 +1,76 @@
+#include<iostream>
+#include<string.h>
+
+using namespace std;
+
+class savings_account{
+	string name;
+	string id;
+	double balance;
+	
+	public: 
+	        
+	        void getter(){
+	        	cout<<" Enter Name : ";
+	        	getline(cin,name);
+	        	cout<<" Enter Id : ";
+	        	getline(cin,id);
+	        	cout<<" Enter Current Balance : ";
+	        	cin>>balance;
+	        	cout<<" "<<endl;
+	        	
+			}
+	        
+			
+			void credit(){
+				int amt;
+				cout<<"Enter Amount to be Credit :";
+				cin>>amt;
+				balance=balance+amt;
+				cout<<"Total balance :"<<balance;
+			}
+			
+			void debit(){
+				int amt;
+				cout<<"Enter Amount to be debit :";
+				cin>>amt;
+				balance=balance-amt;
+				cout<<"Total balance :"<<balance;
+			}
+			void setter(){	
+			    cout<<"****Account  details****"<<endl ;   
+	        	cout<<"Name: "<<name<<endl;
+	        	cout<<"Id :"<<id<<endl;
+	        	cout<<"balance : "  <<balance<<endl;
+			}
+};
+int main(){
+	int n;
+	savings_account Tera_account;
+	
+	Tera_account.getter();
+	
+	cout<<"*************"<<endl;
+	cout<<"Choose Action -"<<endl;
+	cout<<"1.Credit"<<endl;
+	cout<<"2.Debit"<<endl;
+	
+	cin>>n;
+	
+	switch(n){
+		case 1:
+			Tera_account.credit();
+			break;
+			
+	    case 2:
+	    	Tera_account.debit();
+	    	break;
+	    	
+	    default: break;
+	};
+	
+	Tera_account.setter();
+	
+	return 0;
+   
+}
