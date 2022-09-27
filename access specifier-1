@@ -23,7 +23,7 @@ class savings_account{
 	        
 			
 			void credit(){
-				int amt;
+				double amt;
 				cout<<"Enter Amount to be Credit :";
 				cin>>amt;
 				balance=balance+amt;
@@ -31,14 +31,14 @@ class savings_account{
 			}
 			
 			void debit(){
-				int amt;
+				double amt;
 				cout<<"Enter Amount to be debit :";
 				cin>>amt;
 				balance=balance-amt;
-				cout<<"Total balance :"<<balance;
+				cout<<endl<<"Total balance :"<<balance;
 			}
 			void setter(){	
-			    cout<<"****Account  details****"<<endl ;   
+			    cout<<endl<<"****Account  details****"<<endl ;   
 	        	cout<<"Name: "<<name<<endl;
 	        	cout<<"Id :"<<id<<endl;
 	        	cout<<"balance : "  <<balance<<endl;
@@ -46,9 +46,9 @@ class savings_account{
 };
 int main(){
 	int n;
-	savings_account Tera_account;
+	savings_account ac;
 	
-	Tera_account.getter();
+	ac.getter();
 	
 	cout<<"*************"<<endl;
 	cout<<"Choose Action -"<<endl;
@@ -59,17 +59,19 @@ int main(){
 	
 	switch(n){
 		case 1:
-			Tera_account.credit();
+			ac.credit();
 			break;
 			
 	    case 2:
-	    	Tera_account.debit();
+	    	ac.debit();
 	    	break;
 	    	
-	    default: break;
+	    default: 
+        cout<<"Invalid Operation"<<endl;
+         break;
 	};
 	
-	Tera_account.setter();
+	ac.setter();
 	
 	return 0;
    
