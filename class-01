@@ -8,23 +8,23 @@ class student{
 	
 	public: 
 	        void ask_details(){
-	        	cout<<"Enter Name : ";
-	        	cin>>name;
+	        	cout<<" Enter Name : ";
+	        	getline(cin,name);
 	        	cout<<" Enter Roll Number :";
-	        	cin>>roll_no;
+	        	getline(cin,roll_no);
 	        	cout<<" Enter year :";
 	        	cin>>year;
 	        	
 			}
 	        void showdata(){	
-			    cout<<"****Students details****"<<endl ;   
+			    cout<<endl<<"****Students details****"<<endl ;   
 	        	cout<<"Name: "<<name<<endl;
 	        	cout<<"Roll Number : "<<roll_no<<endl;
 	        	cout<<"Year : "<<year<<endl;
 			}
 };
 int main(){
-	student satwik;
-	satwik.ask_details();
-	satwik.showdata();
+	student a;
+	a.ask_details();
+	a.showdata();
 }
