@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+class Coordinate{
+	int x;
+	int y;
+	int z;
+	
+	public:
+		
+		void get(){
+			cout<<"x=";
+			cin>>x;
+			cout<<"y=";
+			cin>>y;
+			cout<<"z=";
+			cin>>z;
+		}
+		print(){
+			cout<<"x="<<x<<"y="<<y<<"z="<<z<<endl;
+		}
+		
+};
+
+int main(){
+	Coordinate line_1;
+	
+	line_1.get();
+	Coordinate line_2(line_1);
+	Coordinate line_3=line_1;
+	
+	line_1.print();
+	line_2.print();
+	line_3.print();
+	return 0;
+}
