@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+class circle{
+	int x;
+	int y;
+	
+	public:
+		
+		void getx(){
+			cout<<"x="<<x<<endl;
+		}
+		
+		void gety(){
+			cout<<"y="<<y<<endl;
+		}
+		
+		circle(int x1,int y1){
+			x=x1;
+			y=y1;
+		}
+};
+
+int main(){
+	circle c(3,2);
+	c.getx();
+	c.gety();
+    return 0;
+}
