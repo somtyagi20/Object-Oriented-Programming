@@ -1,1 +1,36 @@
+#include<iostream>
+using namespace std;
 
+class Alpha{
+    protected: 
+    int Age;
+    public:
+    Alpha(){
+        cout<<"hello !! This is Alpha. "<<endl;
+    }
+    };
+
+class Beta{
+    public:
+     Beta(){
+        cout<<"hello !! This is Beta. "<<endl;
+    }
+};
+
+class Gamma : public Beta , public Alpha{
+   
+   public:
+   Gamma(){
+    cout<<"Hello!!,This is Gamma .";
+   }
+};
+
+
+int main(){
+   
+
+    Gamma g;
+    return 0;
+}
+
+//constructor of base class_1 is executed first followed by the constryctor of base class_2 and then derived class's constructor is executed
