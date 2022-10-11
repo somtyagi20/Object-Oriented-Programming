@@ -16,8 +16,8 @@ class Coordinate{
 			cout<<"z=";
 			cin>>z;
 		}
-		print(){
-			cout<<"x="<<x<<"y="<<y<<"z="<<z<<endl;
+		void print(){
+			cout<<"x="<<x<<endl<<"y="<<y<<endl<<"z="<<z<<endl;
 		}
 		
 };
