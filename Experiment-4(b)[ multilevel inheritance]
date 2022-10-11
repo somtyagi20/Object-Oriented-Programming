@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+class Vehicle{
+    protected: 
+    string category,reg_no;
+    };
+
+class Four_wheeler : public Vehicle{
+    protected:
+    int Issue_Year;
+    string model_no,company_name;
+};
+
+class car : public Four_wheeler{
+
+public:
+
+    void setter(){
+        category="Four Wheeler";
+        reg_no="KA03JJJ9324";
+        model_no="NEXON XZA Plus P";
+        Issue_Year=2018;
+        company_name="TATA MOTORS";
+        }
+
+    void getter(){
+        cout<<"Category : "<<category<<endl;
+        cout<<"Registration No. : "<<reg_no<<endl;
+        cout<<"Model : "<<model_no<<endl;
+        cout<<"Issue year : "<<Issue_Year<<endl;
+        cout<<"Company Name : "<<company_name<<endl;
+    }
+};
+
+
+int main(){
+    cout<<endl<<"*********Car Details******** "<<endl;
+    cout<<"-------------------------------"<<endl;
+
+    car c1;
+    c1.setter();
+    c1.getter();
+    
+    return 0;
+}
