@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+
+class Person{
+    protected: 
+    int Age;
+    string Mobile_No,Name,Address,Occupation;
+    };
+class Employee{
+    protected:
+    string Position,Merital_status,Working_experience;
+};
+
+class manager : public Person , public Employee{
+   string field;
+
+   public:
+   void setter(){
+           Name="Satwik Tiwari";
+           Age=38;
+           Address="Flat No. 142 Dholera city Gujrat ";
+           Mobile_No="9824536527";
+           Merital_status="unmarried";
+           Position="Manager";
+           Occupation="Ethical Hacker";
+           Working_experience="12 Years";
+           field="Cyber Security";
+   }
+
+   void getter(){
+    cout<<"Name : "<<Name<<endl;
+    cout<<"Age : "<<Age<<endl;
+    cout<<"Address : "<<Address<<endl;
+    cout<<"Mobile NO : "<<Mobile_No<<endl;
+    cout<<"Merital Status : "<<Merital_status<<endl;
+    cout<<"Position : "<<Position<<endl;
+    cout<<"Occupation : "<<Occupation<<endl;
+    cout<<"Working Experience : "<<Working_experience<<endl;
+    cout<<"Field : "<<field<<endl;
+   }
+
+};
+
+int main(){
+    cout<<endl<<"*********Manager Details******** "<<endl;
+    cout<<"-------------------------------"<<endl;
+
+    manager mg;
+    mg.setter();
+    mg.getter();
+    
+    return 0;
+}
